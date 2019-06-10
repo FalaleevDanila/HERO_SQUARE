@@ -15,6 +15,12 @@ class TrainingWindow : public QWidget
 public:
     explicit TrainingWindow(QWidget *parent = nullptr);
     ~TrainingWindow();
+
+    void setMainWindow(MainWindow *newMainWindow)
+    {
+        mainWindow = newMainWindow;
+    }
+
 signals:
 
     // Сигнал для первого окна на открытие
@@ -24,7 +30,6 @@ public slots:
 
     // Слот-обработчик нажатия кнопки
     void on_pushButton_exit_clicked();
-
 
 
 private:

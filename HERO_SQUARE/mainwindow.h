@@ -28,6 +28,15 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    void setTrainingWindow(TrainingWindow *newTrainingWindow)
+    {
+        trainingWindow = newTrainingWindow;
+    }
+    void setGameWindow(GameWindow *newGameWindow)
+    {
+        gameWindow = newGameWindow;
+    }
+
 signals:
     void playGame();
     void trainingText();
