@@ -26,7 +26,7 @@ class GameWindow : public QWidget
 
 public:
 
-    explicit GameWindow(QWidget *parent = nullptr);
+    explicit GameWindow(MainWindow *mainWindow, QWidget *parent = nullptr);
     void getLevel();
 
 signals:

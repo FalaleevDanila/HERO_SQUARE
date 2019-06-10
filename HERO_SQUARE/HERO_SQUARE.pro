@@ -52,12 +52,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES +=
 
-DISTFILES += \
-    sounds/OST — Calling all units (www.mixmuz.ru).mp3 \
-    sounds/PAYDAY 2 Soundtrack — 08 - Fuse Box (www.mixmuz.ru).mp3 \
-    sounds/Payday 2 — Full Force Forward (www.mixmuz.ru).mp3 \
-    sounds/Simon Viklund — Black Yellow Moebius(PAYDAY 2 the Soundtrack) (www.mixmuz.ru).mp3 \
-    sounds/Simon Viklund — Time Window (Payday 2 OST) (www.mixmuz.ru).mp3
 
 
 

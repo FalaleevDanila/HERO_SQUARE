@@ -2,15 +2,15 @@
 #include "ui_gamewindow.h"
 
 
-GameWindow::GameWindow(QWidget *parent) :
+GameWindow::GameWindow(MainWindow *mainWindow, QWidget *parent)
+    :
+    mainWindow(mainWindow),
     QWidget(parent),
     ui(new Ui::GameWindow)
 {
     ui->setupUi(this);
 
     pauseWindow = new PauseWindow();
-
-    mainWindow = new MainWindow();
 
     connect(pauseWindow, &PauseWindow::continueGame, this, &GameWindow::show);
 
@@ -51,7 +51,6 @@ GameWindow::GameWindow(QWidget *parent) :
      * изменения состояния графической сцены
      * */
     timer = new QTimer();
-    //connect(timer, &QTimer::timeout, body, &Body::keyPressEvent);
     timer->start(1000 / 50);
 }
 

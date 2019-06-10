@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // подключаем к слоту запуска главного окна по кнопке в окне обучения
     connect(trainingWindow, &TrainingWindow::exit, this, &MainWindow::show);
     // Инициализируем окно загрузки
-    gameWindow= new GameWindow();
+    gameWindow= new GameWindow(nullptr, this);
 
 }
 
