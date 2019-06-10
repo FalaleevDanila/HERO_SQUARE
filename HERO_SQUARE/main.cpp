@@ -5,8 +5,19 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
 
-    return a.exec();
+    GameWindow gameWindow;
+    TrainingWindow trainingWindow;
+    MainWindow mainWindow;
+    PauseWindow pauseWindow;
+
+    gameWindow.setMainWindow(&mainWindow);
+    gameWindow.setPauseWindow(&pauseWindow);
+    trainingWindow.setMainWindow(&mainWindow);
+    mainWindow.setGameWindow(&gameWindow);
+    mainWindow.setTrainingWindow(&trainingWindow);
+
+    mainWindow.show();
+
+    return QApplication::exec();
 }

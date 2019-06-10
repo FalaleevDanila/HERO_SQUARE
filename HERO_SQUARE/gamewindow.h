@@ -26,8 +26,18 @@ class GameWindow : public QWidget
 
 public:
 
-    explicit GameWindow(MainWindow *mainWindow, QWidget *parent = nullptr);
+    explicit GameWindow(QWidget *parent = nullptr);
     void getLevel();
+
+    void setPauseWindow(PauseWindow *newPauseWindow)
+    {
+        pauseWindow = newPauseWindow;
+    }
+
+    void setMainWindow(MainWindow *newMainWindow)
+    {
+        mainWindow = newMainWindow;
+    }
 
 signals:
 

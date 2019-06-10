@@ -2,9 +2,8 @@
 #include "ui_gamewindow.h"
 
 
-GameWindow::GameWindow(MainWindow *mainWindow, QWidget *parent)
+GameWindow::GameWindow(QWidget *parent)
     :
-    mainWindow(mainWindow),
     QWidget(parent),
     ui(new Ui::GameWindow)
 {

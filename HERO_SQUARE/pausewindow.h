@@ -31,7 +31,6 @@ public slots:
 private:
     int level;
     Ui::PauseWindow *ui;
-
 };
 
 
